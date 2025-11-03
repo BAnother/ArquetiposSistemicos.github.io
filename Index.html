@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquetipos Sistemicos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #FFE1E1;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .menu {
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .menu-header {
+            background-color: #2b4bff;
+            color: white;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-header:hover {
+            background-color: #2b4bff;
+        }
+        .menu-content {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #f9f9f9;
+        }
+        .menu.active .menu-content {
+            max-height: 1000px;
+            padding: 15px;
+        }
+        .content-box {
+            min-height: 100px;
+            border: 1px solid #ddd;
+            padding: 10px;
+            background-color: white;
+            margin-top: 10px;
+        }
+        .content-box:empty::before {
+            content: "Has vivido algo similar?";
+            color: #999;
+        }
+        .content-box[contenteditable="true"] {
+            outline: 1px solid #ddd;
+        }
+        .toggle-icon {
+            transition: transform 0.3s;
+        }
+        .menu.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+        .download-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            background-color: red;
+        }
+        #countdown {
+            text-align: center;
+            font-size: 20px;
+            margin-top: 15px;
+            color: red;
+            font-weight: bold;
+        }
+        .content-box img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* Asegura que no se desborde */
+            height: auto;
+        }   
+        .autor-menu .content-box {
+            text-align: center;
+        }
+        .autor-menu .content-box img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+             
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Arquetipos Sistemicos</h1>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>COMPENSACIÓN ENTRE PROCESO Y DEMORA</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>Ajustes inmediatos para lograr metas pueden parecer ineficaces si la retroalimentación tarda en llegar</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplo: Una empreza de juegos lanza parches apresurados para arreglar su juego, sin embargo causa un flujo de acceso inestable a los jugadores al tener que descargar parches. Impidiendo retroalimentar sobre si se arreglo o no el problema inicial</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/CompCresimientoDemora.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>LIMITES DEL CRECIMIENTO</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>Un crecimiento inicial se frena por restricciones ocultas, provocando estancamiento o colapso.</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplo: Una empresa de servidores vio frenado su programa de hosting al desconocer las restricciónes de sus sistemas de cloud, probocando un estancamiento en la subida de información de sus usuarios</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/Limite Crecimiento.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>DESPLAZAMIENTO DE LA CARGA</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>Se privilegian soluciones rápidas que ignoran el problema raíz, generando dependencia.</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplo: Un equipo comenzo a sobrecalentarse por suciedad, la empresa lo soluciono rapidamente bajando más la temperatura de las habitaciónes</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/Desplazamiento Carga.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>CASO ESPECIAL: DESPLAZAMIENTO DE LA CARGA HACIA LA INTERVENCIÓN</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>Una entidad externa resuelve problemas y genera dependencia del sistema intervenido.</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplo: La empresa contrato un tecnico externo a la misma para realizar soporte tecnico mensual</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/Caso Especial.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>EROSIÓN DE METAS</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>La presión a corto plazo lleva a reducir estándares y metas a largo plazo.</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplos: Los desarrolladores de TI son expuestos a metas de entrega diaria para recibir el bono completo, por ende aprezuran el trabajo para terminar a tiempo sin cumplir las normas de calidad preestablecidas</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/Estructura.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>ESCALADA</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>La competencia entre partes lleva a acciones recíprocas cada vez más intensas</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplo: Dos empresas de soporte de TI tienen un local al lado de otro, la empresa A baja su precio para llamar la a tencion de los cliente. Al ver esto, la empresa B copia la estratejia y baja los precios notablemente más, ademas de ofrecer algun extra</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/Escalada.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>ÉXITO PARA QUIEN TIENE ÉXITO</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>Actividades exitosas reciben más recursos, dejando a otras sin apoyo.</p>
+                <div class="content-box" contenteditable="false"><p></p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/Sexito.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>TRAGEDIA DEL TERRENO COMÚN</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>El uso excesivo de un recurso común lo agota para todos</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplo: Todas las empresas de servidores usan la marca de liquido refigerante Mr.Freeze, sin embargo la alta demanda comienza a ser mucha para el fabricante, causando que se vuelva más escaso y suban el precio del producto</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><IMG src="IMG/Trajedia.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>SOLUCIONES RÁPIDAS QUE FALLAN.</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>Las soluciones inmediatas generan problemas peores a largo plazo.</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplo: Los equipos de computo de la sala de TI, fueron conectados en un toma corriente de menor calidad, tras perder los modelos ups anteriores en una inundación en la oficina. Desde entonces, se han reportado irregularidades de corriente</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/solucionenchinga.png"></div>
+            </div>
+        </div>
+
+        <div class="menu">
+            <div class="menu-header">
+                <span>CRECIMIENTO Y SUBINVERSIÓN</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <p>El crecimiento se frena por no invertir en capacidad, generando bajo rendimiento y expectativas reducidas</p>
+                <div class="content-box" contenteditable="false"><p>Ejemplo: La empresa de comunicación Maya sus planes de expación cuando su departamento de TI se encontro con el obstaculo de que no podian conectar más equipos a sus routers y switches, pues estos ya estaban en su maxima capacidad</p></div>
+                <div class="content-box" contenteditable="true"></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/Crece.png"></div>
+            </div>
+        </div>
+        <div class="menu autor-menu">
+            <div class="menu-header">
+                <span>Autor</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="menu-content">
+                <div class="content-box" contenteditable="false"><p>Braulio Hdz Arceo Inf18 Grupo 10</p><p>Contacto: braulivlogs@gmail.com</p><p>+52 351 179 4056</p></div>
+                <div class="content-box" contenteditable="false"><img src="IMG/pinguino.jpeg"></div>
+            </div>
+        </div>
+        <a class="download-btn" id="autoDestructBtn">Auto Destrucción</a>
+        <div id="countdown"></div>
+    </div>
+
+    <script>
+        // Funcionalidad para mostrar/ocultar menús
+        document.querySelectorAll('.menu-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const menu = header.parentElement;
+                menu.classList.toggle('active');
+            });
+        });
+
+        // Función de cuenta regresiva para el botón "Auto Destrucción"
+        document.getElementById('autoDestructBtn').addEventListener('click', function () {
+            const countdownEl = document.getElementById('countdown');
+            let seconds = 3;
+
+            countdownEl.textContent = `Auto destrucción en ${seconds}...`;
+
+            const interval = setInterval(() => {
+                seconds--;
+                if (seconds > 0) {
+                    countdownEl.textContent = `Auto destrucción en ${seconds}...`;
+                } else {
+                    clearInterval(interval);
+                    
+                    window.location.href = "https://youtu.be/ZtfN__d6HJA?si=xpKDHXRYMud5gnOj&t=10"; // Cambia el enlace si deseas
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
